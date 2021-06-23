@@ -1,5 +1,5 @@
   
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, nativeTheme } = require('electron');
 const path = require('path');
 
 if (require('electron-squirrel-startup')) {
@@ -15,9 +15,11 @@ const createWindow = () => {
       nodeIntegration: true, contextIsolation: false,
       enableRemoteModule: true,
     },
-    icon: "./icon.ico"
+    icon: "./icon.ico",
+    darkTheme: true
   });
   mainWindow.removeMenu();
+  nativeTheme.themeSource = 'dark'
   //mainWindow.webContents.openDevTools();
 
   mainWindow.loadFile(path.join(__dirname, 'main_menu.html'));

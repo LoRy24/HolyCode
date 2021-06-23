@@ -60,3 +60,53 @@
   background: rgb(128,128,128);
 }
 
+/* Bootstrap Customizations */
+
+.special_btn-check:focus + .btn, .special_btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 .25rem rgba(255,255,255,0);
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #ececec;
+  text-align: left;
+  list-style: none;
+  background-color: #1b1b1b;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #cecece;
+  text-decoration: none;
+  background-color: #1b1b1b;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #cecece;
+  background-color: #212121;
+  cursor: pointer;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: .25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #cecece;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
