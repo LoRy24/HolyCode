@@ -8,7 +8,7 @@ if (require('electron-squirrel-startup')) {
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
-    width: 1140,
+    width: 1040,
     height: 740, minWidth: 800,
     minHeight: 600,
     webPreferences: {
@@ -17,7 +17,7 @@ const createWindow = () => {
     }
   });
   mainWindow.removeMenu();
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 
   mainWindow.loadFile(path.join(__dirname, 'main_menu.html'));
 };
