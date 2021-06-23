@@ -1,0 +1,62 @@
+/* Drag Bar Design */
+
+.maximized_drag_bar {
+  height: 25px;
+}
+
+.normal_drag_bar {
+  height: 31px;
+}
+
+#drag_bar {
+  position: absolute;
+  width: 100%;
+  background: #363636;
+}
+
+/* Close Button Design */
+
+#close_window_btn {
+  width: 50px;
+  background: rgba(129,129,129,0);
+  transition: 0.15s;
+  height: 100%;
+  display: block;
+}
+
+#close_window_btn:hover {
+  background: red;
+}
+
+/* Minimize and Maximize buttons */
+
+.hide_icon {
+  visibility: hidden;
+}
+
+#min_max_btn {
+  width: 50px;
+  background: rgba(129,129,129,0);
+  transition: 0.15s;
+  height: 100%;
+  display: block;
+}
+
+#min_max_btn:hover {
+  background: rgb(128,128,128);
+}
+
+/* Minimize button */
+
+#minimize_button {
+  width: 50px;
+  background: rgba(129,129,129,0);
+  transition: 0.15s;
+  height: 100%;
+  display: block;
+}
+
+#minimize_button:hover {
+  background: rgb(128,128,128);
+}
+
