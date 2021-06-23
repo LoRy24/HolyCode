@@ -1,20 +1,25 @@
+  
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
-if (require('electron-squirrel-startup')) { 
+if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
-    width: 800, 
-    height: 600, minWidth: 800, 
-    minHeight: 600
+    width: 1140,
+    height: 740, minWidth: 800,
+    minHeight: 600,
+    webPreferences: {
+      nodeIntegration: true, contextIsolation: false,
+      enableRemoteModule: true,
+    }
   });
-
-  mainWindow.loadFile(path.join(__dirname, 'index.html'));
-
+  mainWindow.removeMenu();
   mainWindow.webContents.openDevTools();
+
+  mainWindow.loadFile(path.join(__dirname, 'main_menu.html'));
 };
 
 app.on('ready', createWindow);
