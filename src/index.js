@@ -8,13 +8,14 @@ if (require('electron-squirrel-startup')) {
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
-    width: 1040,
-    height: 740, minWidth: 800,
+    width: 1000,
+    height: 700, minWidth: 800,
     minHeight: 600,
     webPreferences: {
       nodeIntegration: true, contextIsolation: false,
       enableRemoteModule: true,
-    }
+    },
+    icon: "./icon.ico"
   });
   mainWindow.removeMenu();
   //mainWindow.webContents.openDevTools();
