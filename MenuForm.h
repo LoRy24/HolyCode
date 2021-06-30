@@ -16,15 +16,9 @@ namespace HolyCode {
 		MenuForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: aggiungere qui il codice del costruttore.
-			//
 		}
 
 	protected:
-		/// <summary>
-		/// Pulire le risorse in uso.
-		/// </summary>
 		~MenuForm()
 		{
 			if (components)
@@ -49,16 +43,10 @@ namespace HolyCode {
 	protected:
 
 	private:
-		/// <summary>
-		/// Variabile di progettazione necessaria.
-		/// </summary>
 
 
 #pragma region Design
-		/// <summary>
-		/// Metodo necessario per il supporto della finestra di progettazione. Non modificare
-		/// il contenuto del metodo con l'editor di codice.
-		/// </summary>
+
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MenuForm::typeid));
@@ -138,7 +126,7 @@ namespace HolyCode {
 			this->MinimumSize = System::Drawing::Size(750, 550);
 			this->Name = L"MenuForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"MenuForm";
+			this->Text = L"HolyCode - Menu";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->SoftwareIcon))->EndInit();
 			this->ResumeLayout(false);
 
