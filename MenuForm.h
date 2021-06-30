@@ -1,3 +1,5 @@
+#include "FileEditValues.h"
+
 #pragma once
 
 namespace HolyCode {
@@ -133,16 +135,18 @@ namespace HolyCode {
 		}
 #pragma endregion
 
-	private: System::Void OpenFileButton_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		OpenFileDialog openFileDialog;
-		openFileDialog.Title = "Open HolyC File";
-		openFileDialog.Filter = "HolyC File (*.hc)|*.hc";
-
-		// If the dialog result is OK
-		if (openFileDialog.ShowDialog() == System::Windows::Forms::DialogResult::OK) {
-
+		private: System::Void OpenFileButton_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+			// Setup the dialog
+			OpenFileDialog openFileDialog;
+			openFileDialog.Title = "Open HolyC File";
+			openFileDialog.Filter = "HolyC File (*.hc)|*.hc";
+	
+			// If the dialog result is OK
+			if (openFileDialog.ShowDialog() == System::Windows::Forms::DialogResult::OK) 
+			{
+				CodeEditor::
+			}
 		}
-	}
 	};
 }

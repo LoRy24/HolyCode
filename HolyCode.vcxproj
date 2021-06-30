@@ -137,6 +137,7 @@
     <ClInclude Include="CodeEditor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FileEditValues.h" />
     <ClInclude Include="MenuForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -166,6 +167,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CodeEditor.resx">
+      <DependentUpon>CodeEditor.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.h</DependentUpon>
     </EmbeddedResource>

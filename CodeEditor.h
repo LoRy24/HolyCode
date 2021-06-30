@@ -1,3 +1,5 @@
+#include "FileEditValues.h"
+
 #pragma once
 
 namespace HolyCode {
@@ -18,6 +20,7 @@ namespace HolyCode {
 			//
 			//TODO: aggiungere qui il codice del costruttore.
 			//
+
 		}
 
 	protected:
@@ -31,19 +34,29 @@ namespace HolyCode {
 		}
 
 	private:
-
 		System::ComponentModel::Container ^components;
 
-#pragma region Windows Form Designer generated code
+#pragma region Design
 
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"CodeEditor";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->SuspendLayout();
+			// 
+			// CodeEditor
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(984, 671);
+			this->MinimumSize = System::Drawing::Size(1000, 710);
+			this->Name = L"CodeEditor";
+			this->Text = L"CodeEditor";
+			this->Load += gcnew System::EventHandler(this, &CodeEditor::CodeEditor_Load);
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
+	private: System::Void CodeEditor_Load(System::Object^ sender, System::EventArgs^ e) {
+		MessageBox::Show(gcnew String(filePath), "Nabbo");
+	}
 	};
 }

@@ -32,6 +32,9 @@
     <ClInclude Include="CodeEditor.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
+    <ClInclude Include="FileEditValues.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HolyCode.cpp">

@@ -10,5 +10,5 @@ int main(array<System::String ^> ^args)
     Application::SetCompatibleTextRenderingDefault(false);
     HolyCode::MenuForm menuForm;
     Application::Run(% menuForm);
-    return 0;
+    return 0x0;
 }
