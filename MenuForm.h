@@ -1,4 +1,4 @@
-#include "FileEditValues.h"
+#include "CodeEditor.h"
 
 #pragma once
 
@@ -145,7 +145,10 @@ namespace HolyCode {
 			// If the dialog result is OK
 			if (openFileDialog.ShowDialog() == System::Windows::Forms::DialogResult::OK) 
 			{
-				CodeEditor::
+				CodeEditor ^codeEditorForm = gcnew CodeEditor(openFileDialog.FileName);
+				this->Hide();
+				codeEditorForm->ShowDialog();
+				this->Show();
 			}
 		}
 	};

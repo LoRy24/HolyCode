@@ -1,5 +1,3 @@
-#include "FileEditValues.h"
-
 #pragma once
 
 namespace HolyCode {
@@ -14,6 +12,9 @@ namespace HolyCode {
 	public ref class CodeEditor : public System::Windows::Forms::Form
 	{
 	public:
+		String ^filePath;
+
+	public:
 		CodeEditor(void)
 		{
 			InitializeComponent();
@@ -21,6 +22,12 @@ namespace HolyCode {
 			//TODO: aggiungere qui il codice del costruttore.
 			//
 
+		}
+
+		CodeEditor(String ^filePath)
+		{
+			InitializeComponent();
+			this->filePath = filePath;
 		}
 
 	protected:
