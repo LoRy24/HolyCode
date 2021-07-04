@@ -129,6 +129,7 @@ namespace HolyCode {
 			this->Name = L"MenuForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"HolyCode - Menu";
+			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &MenuForm::MenuForm_FormClosed);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->SoftwareIcon))->EndInit();
 			this->ResumeLayout(false);
 
@@ -147,9 +148,12 @@ namespace HolyCode {
 			{
 				CodeEditor ^codeEditorForm = gcnew CodeEditor(openFileDialog.FileName);
 				this->Hide();
-				codeEditorForm->ShowDialog();
-				this->Show();
+				codeEditorForm->Show();
 			}
+		}
+
+		private: System::Void MenuForm_FormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
+			Application::Exit();
 		}
 	};
 }
