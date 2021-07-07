@@ -72,6 +72,7 @@ namespace HolyCode {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->fileToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->RenderMode = System::Windows::Forms::ToolStripRenderMode::Professional;
 			this->menuStrip1->Size = System::Drawing::Size(984, 24);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
@@ -89,25 +90,25 @@ namespace HolyCode {
 			// salvaToolStripMenuItem
 			// 
 			this->salvaToolStripMenuItem->Name = L"salvaToolStripMenuItem";
-			this->salvaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->salvaToolStripMenuItem->Size = System::Drawing::Size(145, 22);
 			this->salvaToolStripMenuItem->Text = L"Salva";
 			// 
 			// salvaComeToolStripMenuItem
 			// 
 			this->salvaComeToolStripMenuItem->Name = L"salvaComeToolStripMenuItem";
-			this->salvaComeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->salvaComeToolStripMenuItem->Size = System::Drawing::Size(145, 22);
 			this->salvaComeToolStripMenuItem->Text = L"Salva Come...";
 			// 
 			// toolStripSeparator1
 			// 
 			this->toolStripSeparator1->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->toolStripSeparator1->Name = L"toolStripSeparator1";
-			this->toolStripSeparator1->Size = System::Drawing::Size(177, 6);
+			this->toolStripSeparator1->Size = System::Drawing::Size(142, 6);
 			// 
 			// esciToolStripMenuItem
 			// 
 			this->esciToolStripMenuItem->Name = L"esciToolStripMenuItem";
-			this->esciToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->esciToolStripMenuItem->Size = System::Drawing::Size(145, 22);
 			this->esciToolStripMenuItem->Text = L"Esci";
 			// 
 			// CodeEditor
@@ -136,51 +137,8 @@ namespace HolyCode {
 		}
 
 		private: System::Void CodeEditor_FormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
-			menuStrip1->Renderer = gcnew ToolStripProfessionalRenderer(gcnew DarkMenuStrip());
+			//menuStrip1->Renderer = gcnew ToolStripProfessionalRenderer();
 			Application::Exit();
-		}
-	};
-
-	public ref class DarkMenuStrip : public ProfessionalColorTable
-	{
-		Color dark = Color::FromArgb(25, 25, 25);
-
-	public:
-
-
-		public Color MenuItemSelected
-		{
-			get { return dark; }
-		}
-
-		public override Color MenuItemBorder
-		{
-			get { return dark; }
-		}
-
-		public override Color MenuItemSelectedGradientBegin
-		{
-			get { return dark; }
-		}
-
-		public override Color MenuItemSelectedGradientEnd
-		{
-			get { return dark; }
-		}
-
-		public override Color MenuItemPressedGradientBegin
-		{
-			get { return dark; }
-		}
-
-		public override Color MenuItemPressedGradientEnd
-		{
-			get { return dark; }
-		}
-
-		public override Color MenuBorder
-		{
-			get { return dark; }
 		}
 	};
 }

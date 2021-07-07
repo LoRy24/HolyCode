@@ -3,5 +3,6 @@
 
 #include "MenuForm.h"
 #include "CodeEditor.h"
+#include "DarkMenuStripClass.h"
 
 #endif
